@@ -142,12 +142,12 @@ void loop()
   PID = pid_p + pid_i + pid_d;
 
   Speed = constrain(abs(PID), 0, 255); 
-  if (Speed > 0 && Speed < 50) Speed = 0;  // prevent weak jitters
+  if (Speed > 0 && Speed < 50) Speed = 0; 
 
   // negative = back
   // positive = forward
 
-  if (abs(error) < 1.0) {  // larger deadzone for test
+  if (abs(error) < 1.0) {  
     Rest();
     pid_i = 0;
     Speed = 0;

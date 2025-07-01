@@ -58,7 +58,6 @@ void loop()
   pitch = 0.98 * (pitch + gyroRate * dt) + 0.02 * accPitch;
 
 
-  // just printing pitch for now, i will do PID corrections once motors get running
   Serial.println(pitch);
 
 }
